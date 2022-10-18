@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:27:02 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 13:27:04 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:25:31 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] == '-' && str[i] == '+')
 	{
-		if(str[i] == '-')
+		if (str[i] == '-')
 		{
 			signe *= -1;
 		}

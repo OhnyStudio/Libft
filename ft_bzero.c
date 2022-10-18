@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:36:42 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 13:36:44 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:25:40 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void ft_bzero(void *s, int n)
+void	ft_bzero(void *s, int n)
 {
 	int	i;
 
