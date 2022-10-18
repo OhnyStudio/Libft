@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:00:26 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 16:20:50 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/18 16:27:45 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,20 @@ static void	ft_reverse_arr(char *str)
 	}
 }
 
+static void	ft_check_n(int n, int i, char *nb)
+{
+	if (n == -2147483648)
+	{
+		nb[i++] = '-';
+		n = 2147483648;
+	}
+	if (n < 0)
+	{
+		nb[i++] = '-';
+		n *= -1;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	int		i;
@@ -39,17 +53,7 @@ char	*ft_itoa(int n)
 	j = 0;	
 	nb = (char *)malloc(sizeof(char) * 12);
 	temp = (char *)malloc(sizeof(char) * 10);
-	if (n == -2147483648)
-	{
-		nb[i++] = '-';
-		nb[i++] = '2';
-		n = 147483648;
-	}
-	if (n < 0)
-	{
-		nb[i++] = '-';
-		n *= -1;
-	}
+	ft_check_n(n, i, nb);
 	while (n != 0)
 	{
 		temp[j++] = (n % 10) + 48;
