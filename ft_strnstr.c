@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:41:39 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:35:00 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:37:32 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-
+	return (NULL);
 }

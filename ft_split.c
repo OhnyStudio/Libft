@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:04 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:35:21 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:37:13 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	**ft_split(char const *s, char c)
 {
-
+	return (NULL);
 }

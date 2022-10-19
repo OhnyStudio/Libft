@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:42:46 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:34:52 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:37:24 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
+	return (NULL);
 }

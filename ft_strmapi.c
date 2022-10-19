@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:41:16 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:34:43 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:37:35 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-
+	return (NULL);
 }

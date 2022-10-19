@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:42:07 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:34:58 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:37:30 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*strrchr(const char *s, int c)
 {
-
+	return (NULL);
 }
