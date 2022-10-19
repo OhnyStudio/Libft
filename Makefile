@@ -6,14 +6,14 @@
 #    By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/19 13:23:37 by jsavard           #+#    #+#              #
-#    Updated: 2022/10/19 14:12:02 by jsavard          ###   ########.fr        #
+#    Updated: 2022/10/19 14:21:19 by jsavard          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
-SRC = *.c
+SRC = ft_atoi.c
 
 all: $(NAME)
 

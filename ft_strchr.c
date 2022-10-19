@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:18 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:40:28 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:52:20 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+char	*ft_strchr(const char *s, int c)
+{
+
+}

@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:41:16 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:41:18 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 15:01:22 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+
+}

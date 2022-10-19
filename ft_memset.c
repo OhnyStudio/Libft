@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:38:54 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:38:57 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:52:03 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+void	*ft_memset(void *b, int c, size_t len)
+{
+
+}

@@ -6,18 +6,18 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:37 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 13:54:54 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:51:00 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s1)
 {
 	char	*str;
 
-	str = (char *) malloc(sizeof(char) * (ft_strlen(src) + 1));
+	str = (char *) malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (str == NULL)
 		return (0);
-	return (ft_strcpy(str, src));
+	return (ft_strcpy(str, s1));
 }

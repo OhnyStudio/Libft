@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:58 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:40:02 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:54:41 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+
+}

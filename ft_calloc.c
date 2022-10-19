@@ -6,13 +6,13 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:35:00 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 13:17:42 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:51:27 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	ft_calloc(int count, int size)
+ void	*ft_calloc(size_t count, size_t size)
 {
 	
 }

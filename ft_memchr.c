@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:38:02 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:38:03 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:51:48 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	
+}

@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:38:44 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:38:45 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:51:58 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+
+}
