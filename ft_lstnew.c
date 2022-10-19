@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:37:26 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:37:29 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:09:36 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+t_list	*ft_lstnew(void *content)
+{
+	
+}

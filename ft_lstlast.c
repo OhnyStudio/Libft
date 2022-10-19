@@ -3,11 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <marvin@42quebec.com>              +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:36:58 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/18 14:37:01 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/19 14:10:08 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 
+t_list	*ft_lstlast(t_list *lst)
+{
+	
+}
