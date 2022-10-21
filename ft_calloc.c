@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:35:00 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/21 07:33:19 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 13:45:19 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	return (NULL);
+	void	*ptr;
+
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+		return (ptr);
+	ft_bzero(ptr, size * count);
+	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:37 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:40:12 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 13:59:59 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,18 @@
 
 char	*ft_strdup(const char *s1)
 {
-	return (NULL);
+	char	*str;
+	int		i;
+
+	str = (char *) malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
