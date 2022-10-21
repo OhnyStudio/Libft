@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:38:54 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:35:31 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 07:33:55 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-
+	return (NULL);
 }

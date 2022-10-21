@@ -3,68 +3,74 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
+/*   By: j[1]savard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:00:26 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:38:47 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 10:44:09 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+#include<stdio.h>
 
-static void	ft_reverse_arr(char *str)
+static int	ft_check_len(int n)
 {
-	char	tmp;
 	int		i;
-	int		len;
+	long	tmp;
 
-	i = 0;
-	len = ft_strlen(str) -1;
-	while (i < len)
+	tmp = n;
+	i = 2;
+	if (tmp < 0)
 	{
-		tmp = str[i];
-		str[i++] = str[len];
-		str[len--] = tmp;
+		tmp *= -1;
+		i++;
 	}
+	while (tmp > 9)
+	{
+		tmp /= 10;
+		i++;
+	}
+	return (i);
 }
 
-static void	ft_check_n(int n, int i, char *nb)
+static char	*ft_create_char(int n, char *nb, char *temp)
 {
+	int		i[2];
+
+	i[0] = 0;
+	i[1] = 0;
 	if (n == -2147483648)
 	{
-		nb[i++] = '-';
-		nb[i++] = '2';
+		nb[i[0]++] = '-';
+		nb[i[0]++] = '2';
 		n = 147483648;
 	}
 	if (n < 0)
 	{
-		nb[i++] = '-';
+		nb[i[0]++] = '-';
 		n *= -1;
 	}
+	while (n > 9)
+	{
+		temp[i[1]++] = (n % 10) + 48;
+		n /= 10;
+	}
+	temp[i[1]++] = (n % 10) + 48;
+	while (i[1]--)
+		nb[i[0]++] = temp[i[1]];
+	nb[i[0]++] = '\0';
+	return (nb);
 }
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		j;
 	char	*nb;
 	char	*temp;
 
-	i = 0;
-	j = 0;	
-	nb = (char *)malloc(sizeof(char) * 12);
-	temp = (char *)malloc(sizeof(char) * 10);
-	ft_check_n(n, i, nb);
-	while (n != 0)
-	{
-		temp[j++] = (n % 10) + 48;
-		n /= 10;
-	}
-	ft_reverse_arr(temp);
-	j = 0;
-	while (temp[j])
-	{
-		nb[i++] = temp[j++];
-	}
-	return (nb);
+	nb = (char *)malloc(sizeof(char) * ft_check_len(n));
+	temp = (char *)malloc(sizeof(char) * (ft_check_len(n)));
+	if (!nb && !temp)
+		return (NULL);
+	free(temp);
+	return (ft_create_char(n, nb, temp));
 }

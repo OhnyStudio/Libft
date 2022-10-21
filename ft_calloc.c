@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:35:00 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:36:18 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 07:33:19 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-
+	return (NULL);
 }

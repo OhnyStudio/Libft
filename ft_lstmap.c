@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:37:17 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:35:48 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 07:33:42 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-
+	return (NULL);
 }

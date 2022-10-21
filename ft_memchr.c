@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:38:02 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/19 17:35:38 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/21 07:39:39 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*str;
+	const char	*str;
 
 	str = s;
 	while (n--)
 	{
 		if (*str++ == c)
-			return (s);
+		{
+			//return (str);
+		}	
 	}
 	return (NULL);
 }
