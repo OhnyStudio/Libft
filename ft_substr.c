@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:42:46 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/21 14:34:02 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/22 09:04:11 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	max;
 	char	*new;
 
+	if (!s)
+		return (NULL);
 	i = start;
 	j = 0;
 	max = ft_strlen(s);
@@ -28,8 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		new[len] = '\0';
 		return (new);
 	}
-	else
-		new = (char *)malloc(sizeof(char) * (len + 1));
+	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new || len <= 0)
 		return (NULL);
 	while (j < len)
