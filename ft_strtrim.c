@@ -6,11 +6,11 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:42:33 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 09:00:17 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/22 13:05:59 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static int	ft_check_start(char c, char const *set)
 {

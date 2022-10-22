@@ -6,13 +6,11 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:27:02 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 12:55:51 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/22 13:04:31 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<string.h>
-#include<stdio.h>
 
 static int	ft_check_max(unsigned long long nb, int signe)
 {
