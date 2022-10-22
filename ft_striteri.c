@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:58 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/21 07:34:09 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/22 12:41:54 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	size_t	i;
 
+	i = 0;
+	if (s)
+	{
+		while (s[i])
+		{
+			(*f)(i, &s[i]);
+			i++;
+		}
+	}
 }
