@@ -6,17 +6,31 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:27:02 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/21 11:11:43 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/22 12:19:13 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include<string.h>
+#include<stdio.h>
+
+static int	ft_check_max(unsigned long long nb, int signe)
+{
+	if (nb > 9223372036854775807)
+	{
+		if (signe < 0)
+			return (0);
+		else
+			return (-1);
+	}
+	return (nb * signe);
+}
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	int		signe;
-	long	nb;
+	int					i;
+	int					signe;
+	unsigned long long	nb;
 
 	i = 0;
 	signe = 1;
@@ -36,5 +50,5 @@ int	ft_atoi(const char *str)
 		nb = nb * 10 + (str[i] - 48);
 		i++;
 	}
-	return (nb * signe);
+	return (ft_check_max(nb, signe));
 }

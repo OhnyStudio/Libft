@@ -6,27 +6,55 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:04 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 08:46:34 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/22 12:19:19 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static char	**ft_set_strs(char const *s, char c)
+static int	ft_count_split(char const *s, char c)
 {
+	int	i;
+	int	tmp;
+
+	i = 1;
+	tmp = 0;
+	while (*s)
+	{
+		if (*s != c && tmp == 0)
+		{
+			tmp = 1;
+			i++;
+		}
+		else if (*s == c)
+		{
+			tmp = 0;
+		}
+		s++;
+	}
+	return (i);
+}
+
+static char	*ft_create_str(const char *str, int start, int finish)
+{
+	char	*temp;
 	int		i;
-	int		count;
-	char	**strs;
 
 	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			count++;
-		i++;
-	}
-	strs = (char **)malloc(sizeof(char *) * (count + 2));
+	temp = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		temp[i++] = str[start++];
+	temp[i] = '\0';
+	return (temp);
+}
+
+static char	**ft_create_strs(char const *s, char c)
+{
+	char	**strs;
+
+	if (!s)
+		return (NULL);
+	strs = (char **)malloc(sizeof(char *) * (ft_count_split(s, c) + 1));
 	if (!strs)
 		return (NULL);
 	return (strs);
@@ -34,7 +62,28 @@ static char	**ft_set_strs(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
+	size_t	i;
+	size_t	j;
+	int		tmp;
 	char	**strs;
 
-	strs = ft_set_strs(s, c);
+	strs = ft_create_strs(s, c);
+	if (!strs)
+		return (NULL);
+	i = 0;
+	j = 0;
+	tmp = -1;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] != c && tmp < 0)
+			tmp = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && tmp >= 0)
+		{
+			strs[j++] = ft_create_str(s, tmp, i);
+			tmp = -1;
+		}
+		i++;
+	}
+	strs[j] = 0;
+	return (strs);
 }
