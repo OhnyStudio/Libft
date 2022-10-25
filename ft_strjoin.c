@@ -6,45 +6,36 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:40:10 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 13:05:36 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/25 12:04:03 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len(const char *str)
-{
-	if (str)
-	{
-		return (ft_strlen(str));
-	}
-	return (0);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
-	int		len;
-	char	*new;
+	char	*str;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc(sizeof(*s1) * len);
+	if (!str)
+		return (NULL);
 	i = 0;
 	j = 0;
-	if (ft_len(s1) && ft_len(s2))
+	while (s1[i])
 	{
-		len = ft_len(s1) + ft_len(s2) + 1;
-		new = (char *)malloc(sizeof(char) * len);
-		if (!new)
-			return (NULL);
-		while (s1[i])
-			new[j++] = s1[i++];
-		i = 0;
-		while (s2[i])
-		{
-			new[j++] = s2[i++];
-		}
-		new[j] = '\0';
-		return (new);
+		str[j++] = s1[i];
+		i++;
 	}
-	return (NULL);
+	i = 0;
+	while (s2[i])
+	{
+		str[j++] = s2[i];
+		i++;
+	}
+	str[j] = 0;
+	return (str);
 }

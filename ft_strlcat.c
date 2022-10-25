@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:40:41 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 13:05:39 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/25 11:31:27 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len_src;
 	int		i;
 
-	if (dstsize <= 0)
-		return (0);
 	len_dest = ft_strlen(dst);
 	len_src = ft_strlen(src);
 	i = 0;
