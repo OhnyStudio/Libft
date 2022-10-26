@@ -6,14 +6,14 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:35:23 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/25 11:29:03 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/25 14:21:46 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include<unistd.h>
-# include<stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {

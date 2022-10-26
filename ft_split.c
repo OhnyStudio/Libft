@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:04 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 13:05:25 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/26 15:54:19 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_count_split(char const *s, char c)
 	int	i;
 	int	tmp;
 
-	i = 1;
+	i = 0;
 	tmp = 0;
 	while (*s)
 	{
@@ -41,23 +41,9 @@ static char	*ft_create_str(const char *str, int start, int finish)
 	int		i;
 
 	i = 0;
-	temp = malloc((finish - start + 1) * sizeof(char));
-	while (start < finish)
-		temp[i++] = str[start++];
-	temp[i] = '\0';
+	temp = ft_calloc((finish - start + 1), sizeof(char));
+	ft_strlcpy(temp, &str[start], (finish - start) + 1);
 	return (temp);
-}
-
-static char	**ft_create_strs(char const *s, char c)
-{
-	char	**strs;
-
-	if (!s)
-		return (NULL);
-	strs = (char **)malloc(sizeof(char *) * (ft_count_split(s, c) + 1));
-	if (!strs)
-		return (NULL);
-	return (strs);
 }
 
 char	**ft_split(char const *s, char c)
@@ -67,7 +53,7 @@ char	**ft_split(char const *s, char c)
 	int		tmp;
 	char	**strs;
 
-	strs = ft_create_strs(s, c);
+	strs = (char **)malloc(sizeof(char *) * (ft_count_split(s, c) + 1));
 	if (!strs)
 		return (NULL);
 	i = 0;

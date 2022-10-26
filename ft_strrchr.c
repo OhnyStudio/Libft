@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:42:07 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/25 11:28:45 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/25 15:37:10 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ char	*ft_strrchr(const char *s, int c)
 	j = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
-			tmp = &s[i];
+			tmp = s + i;
 			j++;
 		}
 		i++;
 	}
-	if (s[i] == c)
-		return ((void *)&s[i]);
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
 	if (j == 0)
 		return (NULL);
 	else
-		return ((void *)tmp);
+		return ((char *)tmp);
 }

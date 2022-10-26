@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:36:24 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/25 10:28:55 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/25 14:23:11 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void	*))
 {
-
+	(*del)(lst->content);
+	free(lst);
 }

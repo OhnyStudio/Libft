@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:36:45 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/25 10:28:52 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/25 14:53:58 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-
+	while (lst)
+	{
+		(*f)(lst->content);
+		lst = lst->next;
+	}
 }

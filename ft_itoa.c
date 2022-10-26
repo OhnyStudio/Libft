@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:00:26 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 13:04:55 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/26 15:59:58 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,18 @@ char	*ft_itoa(int n)
 	char	*nb;
 	char	*temp;
 
+	if (n == 0)
+	{
+		nb = (char *)malloc(sizeof(char) * 2);
+		nb[0] = '0';
+		nb[1] = '\0';
+		return (nb);
+	}
 	nb = (char *)malloc(sizeof(char) * ft_check_len(n));
 	temp = (char *)malloc(sizeof(char) * (ft_check_len(n)));
 	if (!nb && !temp)
 		return (NULL);
-	return (ft_create_char(n, nb, temp));
+	nb = ft_create_char(n, nb, temp);
+	free (temp);
+	return (nb);
 }
