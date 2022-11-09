@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:00:26 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/26 15:59:58 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/11/09 11:50:32 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_check_len(int n)
 	long	tmp;
 
 	tmp = n;
-	i = 2;
+	i = 0;
 	if (tmp < 0)
 	{
 		tmp *= -1;
@@ -29,55 +29,32 @@ static int	ft_check_len(int n)
 		tmp /= 10;
 		i++;
 	}
+	if (tmp >= 0)
+		i++;
 	return (i);
-}
-
-static char	*ft_create_char(int n, char *nb, char *temp)
-{
-	int		i[2];
-
-	i[0] = 0;
-	i[1] = 0;
-	if (n == -2147483648)
-	{
-		nb[i[0]++] = '-';
-		nb[i[0]++] = '2';
-		n = 147483648;
-	}
-	if (n < 0)
-	{
-		nb[i[0]++] = '-';
-		n *= -1;
-	}
-	while (n > 9)
-	{
-		temp[i[1]++] = (n % 10) + 48;
-		n /= 10;
-	}
-	temp[i[1]++] = (n % 10) + 48;
-	while (i[1]--)
-		nb[i[0]++] = temp[i[1]];
-	nb[i[0]++] = '\0';
-	return (nb);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*nb;
-	char	*temp;
+	char			*nb;
+	unsigned int	nbr;
+	int				len;
 
-	if (n == 0)
-	{
-		nb = (char *)malloc(sizeof(char) * 2);
-		nb[0] = '0';
-		nb[1] = '\0';
-		return (nb);
-	}
-	nb = (char *)malloc(sizeof(char) * ft_check_len(n));
-	temp = (char *)malloc(sizeof(char) * (ft_check_len(n)));
-	if (!nb && !temp)
+	len = ft_check_len(n);
+	nb = ft_calloc(sizeof(char), len + 1);
+	if (!nb)
 		return (NULL);
-	nb = ft_create_char(n, nb, temp);
-	free (temp);
+	if (n < 0)
+		nbr = -n;
+	else
+		nbr = n;
+	nb[len] = '\0';
+	while (len--)
+	{
+		nb[len] = (nbr % 10) + '0';
+		nbr /= 10;
+	}
+	if (n < 0)
+		nb[0] = '-';
 	return (nb);
 }

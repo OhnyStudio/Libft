@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johnysavard <johnysavard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:04 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/29 09:58:14 by johnysavard      ###   ########.fr       */
+/*   Updated: 2022/11/09 13:05:39 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"
 
 static int	ft_count_split(char const *s, char c)
 {
@@ -35,15 +36,6 @@ static int	ft_count_split(char const *s, char c)
 	return (i);
 }
 
-static char	*ft_create_str(const char *str, int start, int finish)
-{
-	char	*temp;
-
-	temp = ft_calloc((finish - start + 1), sizeof(char));
-	ft_strlcpy(temp, &str[start], (finish - start) + 1);
-	return (temp);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -51,8 +43,8 @@ char	**ft_split(char const *s, char c)
 	int		tmp;
 	char	**strs;
 
-	strs = (char **)malloc(sizeof(char *) * (ft_count_split(s, c) + 1));
-	if (!strs)
+	strs = ft_calloc(sizeof(char *), (ft_count_split(s, c) + 1));
+	if (!strs || !s)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -63,7 +55,8 @@ char	**ft_split(char const *s, char c)
 			tmp = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && tmp >= 0)
 		{
-			strs[j++] = ft_create_str(s, tmp, i);
+			strs[j] = ft_calloc((i - tmp + 1), sizeof(char));
+			ft_strlcpy(strs[j++], &s[tmp], (i - tmp) + 1);
 			tmp = -1;
 		}
 		i++;
@@ -71,3 +64,29 @@ char	**ft_split(char const *s, char c)
 	strs[j] = 0;
 	return (strs);
 }
+
+/*int	main(void)
+{
+	char	**strs;
+	int		i;
+
+	strs = ft_split("hello!", ' ');
+	i = 0;
+	while (strs[i])
+	{
+		printf("%s\n", strs[i]);
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	strs = ft_split("hello! test", ' ');
+	i = 0;
+	while (strs[i])
+	{
+		printf("%s\n", strs[i]);
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (0);
+}*/
