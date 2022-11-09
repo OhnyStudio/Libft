@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
+/*   By: johnysavard <johnysavard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:39:04 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/26 15:54:19 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/10/29 09:58:14 by johnysavard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ static int	ft_count_split(char const *s, char c)
 static char	*ft_create_str(const char *str, int start, int finish)
 {
 	char	*temp;
-	int		i;
 
-	i = 0;
 	temp = ft_calloc((finish - start + 1), sizeof(char));
 	ft_strlcpy(temp, &str[start], (finish - start) + 1);
 	return (temp);
