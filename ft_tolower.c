@@ -6,11 +6,9 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:09:49 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/22 13:06:04 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/11/09 15:26:53 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

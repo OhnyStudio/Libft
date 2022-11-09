@@ -6,11 +6,9 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:27:02 by jsavard           #+#    #+#             */
-/*   Updated: 2022/10/25 14:01:09 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/11/09 15:31:01 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_check_max(unsigned long long nb, int signe)
 {
